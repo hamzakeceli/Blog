@@ -1,0 +1,16 @@
+﻿@model AboutPage
+
+@{
+    ViewBag.Title = "About sayfası";
+}
+
+
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-10" style="background-color:white">
+        <div id="lipsum">
+            <h2 class="text-center">@Model.TitleName</h2>
+            @Html.Raw(Model.AboutDescription)
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initinal-scale=1.0" />
+    <title>@ViewBag.Title</title>
+
+    
+    <link href="~/Content/CustomCss/Navbar.css" rel="stylesheet" />
+    <link href="~/Content/lib/bootsrap/css/bootsrap.css" rel="stylesheet" />
+    @RenderSection("customStyles", false)
+
+</head>
+<body class="container-fluid" >
+    <!-- navbar-->
+    
+    <div class="row" >
+        <div class="col-3" >
+            @Html.Partial("_Navbar")
+        </div>
+        <div class="col-9" style="background-color:grey">
+            
+                @RenderBody()
+
+            
+        </div>
+    </div>
+    
+
+
+    <!--Footer  istersen ekle-->
+
+    <script src="~/lib/jQuery/jQuery-3.3.1.js"></script>
+    <script src="~/lib/bootsrap/js/bootsrap.js"></script>
+    @RenderSection("customScripts", false)
+
+
+
+</body>
+</html>
