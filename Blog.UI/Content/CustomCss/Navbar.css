@@ -1,5 +1,80 @@
 ﻿
-.navbar8 {
+#navbar {
     height: 100vh;
     background-color:white;
+    
+}
+
+div#navbar h3#name {
+  
+  
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #333;
+    font-family:'Bookman Old Style';
+}
+
+div#navbar a.nav-link {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius:30px;
+}
+
+
+.Icerik{
+    
+    background-color:grey;
+   
+}
+
+.Icerik10 {
+
+    background-color:white;
+    margin-top: 20px;
+
+}
+
+.Baslik {
+    margin-top:10px;
+    color: #333;
+    font-family: 'Bookman Old Style';
+}
+
+/*icomlar */
+.fa {
+   
+    padding: 20px;   
+    font-size: 20px;
+    width: 50px;
+    height:50px;
+    text-align: center;   
+    margin: 55px 2px;
+    border-radius:50px;
+
+    
+}
+
+    .fa:hover {
+        opacity: 0.7;
+        
+    }
+
+
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+    
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
 }

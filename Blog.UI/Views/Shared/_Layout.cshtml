@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width,initinal-scale=1.0" />
     <title>@ViewBag.Title</title>
 
-    
-    <link href="~/Content/CustomCss/Navbar.css" rel="stylesheet" />
+
+
     <link href="~/Content/lib/bootsrap/css/bootsrap.css" rel="stylesheet" />
+
+    <link href="~/Content/CustomCss/Navbar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @RenderSection("customStyles", false)
 
 </head>
@@ -18,7 +21,7 @@
         <div class="col-3" >
             @Html.Partial("_Navbar")
         </div>
-        <div class="col-9" style="background-color:grey">
+        <div class="Icerik col-9" >
             
                 @RenderBody()
 
