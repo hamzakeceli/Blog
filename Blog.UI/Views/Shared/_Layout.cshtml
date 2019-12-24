@@ -8,27 +8,33 @@
 
 
     <link href="~/Content/lib/bootsrap/css/bootsrap.css" rel="stylesheet" />
-
     <link href="~/Content/CustomCss/Navbar.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     @RenderSection("customStyles", false)
 
 </head>
-<body class="container-fluid" >
+<body class="container-fluid">
     <!-- navbar-->
-    
-    <div class="row" >
-        <div class="col-3" >
+
+    <div class="row">
+        <div class="col-3">
             @Html.Partial("_Navbar")
         </div>
-        <div class="Icerik col-9" >
-            
-                @RenderBody()
+        <div class="Icerik col-9">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 Icerik10">
 
-            
+                    @RenderBody()
+
+
+
+                </div>
+            </div>
         </div>
     </div>
-    
+
 
 
     <!--Footer  istersen ekle-->
