@@ -1,5 +1,6 @@
 ﻿using Blog.Entity;
 using Blog.Services;
+using Blog.UI.Extensions;
 using Blog.UI.Models;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,8 @@ namespace Blog.UI.Areas.Admin.Controllers
         public ActionResult Index()
         {
             var aboutModel = _aboutPageServices.GetAboutPage();
-            return View(aboutModel);
+            var aboutViewModel = aboutModel.GetAboutViewModel();
+            return View(aboutViewModel);
         }
 
         [HttpGet]
@@ -31,19 +33,20 @@ namespace Blog.UI.Areas.Admin.Controllers
         {
             var aboutModel = _aboutPageServices.GetAboutPage();
 
-            var viewModel = new AboutViewModel
-            {
-                Title = aboutModel.TitleName,
-                Description=aboutModel.AboutDescription
-               
-            };
+            var viewModel = aboutModel.GetAboutViewModel();
 
             return View(viewModel);
         }
 
         [HttpPost]
-        public ActionResult Edit(AboutPage aboutPage)
+        public ActionResult Edit(AboutViewModel aboutViewModel)
         {
+
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("", " bu alan girilmesi zorunludur.");
+            }
+               
 
             return RedirectToAction("Edit");
         }

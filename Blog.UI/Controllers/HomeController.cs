@@ -1,10 +1,7 @@
 ﻿using Blog.Entity;
 using Blog.Services;
 using Blog.UI.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using Blog.UI.Extensions;
 using System.Web.Mvc;
 
 namespace Blog.UI.Controllers
@@ -32,24 +29,11 @@ namespace Blog.UI.Controllers
         [HttpGet]
         public ActionResult About()
         {
+            var about = aboutPageServices.GetAboutPage();
+            var viewModel = about.GetAboutViewModel(); // about model çevirdik
            
-            AboutPage about = aboutPageServices.GetAboutPage();
-            if (about == null)
-            {
-                return View("_NotFound");
-            }
-            else
-            {
-                var viewModel = new AboutViewModel
-                {
-                    Title = about.TitleName,
-                    Description = about.AboutDescription
-
-                };
-
-
                 return View(viewModel);
-            }
+            
            
         }
         [HttpGet]
