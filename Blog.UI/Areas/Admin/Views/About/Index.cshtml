@@ -1,0 +1,22 @@
+﻿@{ 
+
+    ViewBag.AdminTitle = "Hakkımızda İçeriği";
+}
+
+@model Blog.Entity.AboutPage
+
+<a href="@Url.Action("Edit")" class="btn btn-block btn-outline-primary" > Düzenle</a>
+
+
+
+    <h4 class="text-center" style="color:blue">
+        @Model.TitleName
+    </h4> 
+
+    <p>
+        @Html.Raw(@Model.AboutDescription)
+    </p>
+
+
+
+

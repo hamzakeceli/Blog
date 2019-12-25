@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace Blog.Entity
@@ -8,8 +9,10 @@ namespace Blog.Entity
     {
         public int Id { get; set; }
 
+      
+        [Display(Name ="Başlık")] // uI görünesini istediğimiz text 
         public string TitleName { get; set; }
-
+        [Display(Name = "İçerik")]
         public string AboutDescription { get; set; }
 
     }

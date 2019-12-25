@@ -1,5 +1,6 @@
 ﻿using Blog.Entity;
 using Blog.Services;
+using Blog.UI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,8 +38,19 @@ namespace Blog.UI.Controllers
             {
                 return View("_NotFound");
             }
+            else
+            {
+                var viewModel = new AboutViewModel
+                {
+                    Title = about.TitleName,
+                    Description = about.AboutDescription
 
-            return View(about);
+                };
+
+
+                return View(viewModel);
+            }
+           
         }
         [HttpGet]
         public ActionResult Contact()
