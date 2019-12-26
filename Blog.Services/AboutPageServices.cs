@@ -18,5 +18,11 @@ namespace Blog.Services
             var model=_aboutManagement.GetAboutPage();
             return model;
         }
+
+        public void UpdateAbout(AboutPage aboutPage)
+        {
+            var result = _aboutManagement.EditAboutPage(aboutPage);
+
+        }
     }
 }

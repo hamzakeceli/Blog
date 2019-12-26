@@ -44,11 +44,14 @@ namespace Blog.UI.Areas.Admin.Controllers
 
             if (!ModelState.IsValid)
             {
-                ModelState.AddModelError("", " bu alan girilmesi zorunludur.");
+                ModelState.AddModelError("", "tüm alanları doldurman zorunludurR.");
+                return View();
             }
-               
+            var aboutPage = aboutViewModel.GetAboutPage();
 
-            return RedirectToAction("Edit");
+            _aboutPageServices.UpdateAbout(aboutPage);
+
+            return RedirectToAction("Index");
         }
 
     }

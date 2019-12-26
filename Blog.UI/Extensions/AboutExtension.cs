@@ -13,12 +13,25 @@ namespace Blog.UI.Extensions
         {
             var aboutViewModel = new AboutViewModel()
             {
+                Id = aboutPage.Id,
                 Title = aboutPage.TitleName,
                 Description = aboutPage.AboutDescription,
 
             };
 
             return aboutViewModel;
+        }
+        public static AboutPage GetAboutPage(this AboutViewModel aboutViewModel)
+        {
+            var aboutPage = new AboutPage
+            {
+                Id = aboutViewModel.Id,
+                TitleName = aboutViewModel.Title,
+                AboutDescription = aboutViewModel.Description
+
+            };
+
+            return aboutPage;
         }
 
     }
